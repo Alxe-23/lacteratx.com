@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LACTERA Therapeutics, Inc. | Transforming Wound Healing Through Science</title>
+    <style>
+        :root {
+            --primary: #0B2545;
+            --primary-light: #13315C;
+            --accent: #0284C7;
+            --accent-bg: #E0F2FE;
+            --bg-main: #FFFFFF;
+            --bg-subtle: #F8FAFC;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border-color: #E2E8F0;
+            --success: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Corporate Identity Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: #E2E8F0;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            text-align: center;
+            padding: 8px 16px;
+            font-weight: 500;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+            color: var(--primary);
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: #FFFFFF !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #F0F7FF 0%, #FFFFFF 100%);
+            padding: 76px 24px 64px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-bg);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero h1 {
+            font-size: 2.85rem;
+            line-height: 1.18;
+            color: var(--primary);
+            font-weight: 800;
+            max-width: 780px;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.12rem;
+            color: var(--text-muted);
+            max-width: 740px;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 52px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            padding: 13px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+
+        .btn-secondary {
+            background-color: #FFFFFF;
+            color: var(--primary);
+            border: 1px solid var(--border-color);
+            padding: 13px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background-color: var(--bg-subtle);
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+        }
+
+        .metric-value {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .metric-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .metric-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Sections */
+        section {
+            padding: 72px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section.subtle {
+            background-color: var(--bg-subtle);
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 780px;
+            margin-bottom: 40px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .card h3 {
+            font-size: 1.18rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-size: 0.94rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .pill {
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        /* Analytical Parameters Grid */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .spec-box {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .spec-num {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .spec-label {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .spec-detail {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Journal Table Styling (Exact Reproduction of Table 1) */
+        .table-wrapper {
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 32px;
+            overflow-x: auto;
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+        }
+
+        .table-caption {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.45;
+        }
+
+        .clinical-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            min-width: 580px;
+        }
+
+        .clinical-table thead th {
+            border-top: 2px solid var(--primary);
+            border-bottom: 1.5px solid var(--primary);
+            padding: 12px 14px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            background-color: var(--bg-subtle);
+        }
+
+        .clinical-table thead th:first-child {
+            text-align: left;
+        }
+
+        .clinical-table tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #F1F5F9;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        .clinical-table tbody td:first-child {
+            text-align: left;
+        }
+
+        .clinical-table tbody tr.group-header td {
+            font-weight: 700;
+            color: var(--primary);
+            background-color: #F8FAFC;
+            padding-top: 14px;
+        }
+
+        .clinical-table tbody tr.indent td:first-child {
+            padding-left: 28px;
+            color: var(--text-muted);
+        }
+
+        .clinical-table tbody tr:last-child td {
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .table-footnote {
+            margin-top: 12px;
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .table-source {
+            margin-top: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* References List */
+        .ref-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .ref-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Highlight Box */
+        .highlight-banner {
+            background-color: #F0F9FF;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 24px;
+        }
+
+        .highlight-banner h4 {
+            color: var(--primary);
+            font-size: 1.02rem;
+            margin-bottom: 6px;
+        }
+
+        .highlight-banner p {
+            color: var(--text-dark);
+            font-size: 0.94rem;
+        }
+
+        /* Contact Box */
+        .contact-card {
+            background: var(--primary);
+            color: #FFFFFF;
+            border-radius: 14px;
+            padding: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .contact-card p {
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            max-width: 560px;
+        }
+
+        .contact-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .email-pill {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .copy-btn {
+            background: var(--accent);
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .copy-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0F172A;
+            color: #94A3B8;
+            padding: 48px 24px;
+            font-size: 0.84rem;
+        }
+
+        .footer-content {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #1E293B;
+            margin-bottom: 24px;
+        }
+
+        .footer-brand {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #94A3B8;
+        }
+
+        @media (max-width: 860px) {
+            nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar" translate="no">
+        LACTERA THERAPEUTICS, INC. &nbsp;&middot;&nbsp; U.S. DELAWARE C-CORPORATION &nbsp;&middot;&nbsp; WOUND HEALING &amp; REGENERATIVE SCIENCE
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="brand" translate="no">
+                <div class="brand-logo">L</div>
+                <div class="brand-text">
+                    <span class="brand-name">LACTERA</span>
+                    <span class="brand-sub">THERAPEUTICS, INC.</span>
+                </div>
+            </a>
+            <nav translate="no">
+                <a href="#mission">Mission</a>
+                <a href="#platform">Platform</a>
+                <a href="#science">Science</a>
+                <a href="#clinical">Clinical Data</a>
+                <a href="#ip">IP &amp; Trade Secrets</a>
+                <a href="#global">Global Presence</a>
+                <a href="#governance">Governance</a>
+                <a href="#investors" class="nav-cta">Investor &amp; Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 01. HOME -->
+    <section id="home" class="hero">
+        <div class="container">
+            <span class="badge">Bioactive Wound Healing &amp; Tissue Regeneration Platform</span>
+            <h1>Transforming Wound Healing Through Science</h1>
+            <p><span translate="no">LACTERA Therapeutics, Inc.</span> is a U.S. biotechnology company advancing science-driven, cell-free bioactive solutions for wound healing, tissue repair, and regenerative healthcare. Built upon proprietary fermentation technology, peer-reviewed clinical trials, and real-world validation, LACTERA bridges scientific innovation with clinical practice to improve outcomes for patients with acute and chronic wounds.</p>
+
+            <div class="hero-actions">
+                <a href="#clinical" class="btn-primary">Explore Clinical Evidence</a>
+                <a href="#investors" class="btn-secondary">Institutional &amp; Investor Inquiries</a>
+            </div>
+
+            <div class="metrics-grid" translate="no">
+                <div class="metric-card">
+                    <div class="metric-value">94%</div>
+                    <div class="metric-title">Complete Healing at 24 Weeks</div>
+                    <div class="metric-desc">vs. 64% in control group (P = 0.003; BJD 2026 Double-Blind RCT)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">11 Days</div>
+                    <div class="metric-title">STSG Donor Site Closure</div>
+                    <div class="metric-desc">Reduced from 17 days in control cohort (JWC / WUWHS 2026)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0%</div>
+                    <div class="metric-title">Clinical Adverse Events</div>
+                    <div class="metric-desc">Longitudinal safety evaluation across clinical cases (SCMJ 2025)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">2°C–40°C</div>
+                    <div class="metric-title">Cold-Chain-Free Stability</div>
+                    <div class="metric-desc">36-month ambient structural integrity without refrigeration</div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 36px;">
+                <div class="card">
+                    <h3>Key Highlights</h3>
+                    <ul class="check-list">
+                        <li>U.S. Delaware C-Corporation</li>
+                        <li>Proprietary Cell-Free Bioactive Ferment Filtrate Platform</li>
+                        <li>Patent-Protected Technology &amp; Undisclosed Process Trade Secrets</li>
+                        <li>Peer-Reviewed Multi-Center Clinical Trials &amp; Real-World Evidence</li>
+                        <li>Validated International Clinical &amp; Humanitarian Deployment</li>
+                        <li>Asset-Light Global Research &amp; Licensing Strategy</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Focus Areas &amp; Global Vision</h3>
+                    <p>To establish a globally recognized biotechnology platform delivering innovative, evidence-based wound care and regenerative solutions that improve patient recovery worldwide.</p>
+                    <div class="pill-group">
+                        <span class="pill">Advanced Wound Care</span>
+                        <span class="pill">Skin Barrier Recovery</span>
+                        <span class="pill">Tissue Regeneration</span>
+                        <span class="pill">Regenerative Medicine</span>
+                        <span class="pill">Translational Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. WHY WE EXIST & ABOUT US -->
+    <section id="mission">
+        <div class="container">
+            <div class="section-label">Why We Exist &amp; Corporate Identity</div>
+            <h2 class="section-title">Improvement, Not Setback.</h2>
+            <p class="section-intro">Across the globe, millions of patients suffering from diabetic foot ulcers, chronic non-healing wounds, post-surgical defects, and complex burns face prolonged recovery cycles, antimicrobial resistance, and limited access to cold-chain-dependent biologics.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Why We Exist</h3>
+                    <p><span translate="no">LACTERA Therapeutics, Inc.</span> was founded to address critical unmet clinical needs in complex wound care—where conventional passive dressings fail to resolve stalled healing, and antimicrobial agents risk cytotoxicity or resistance.</p>
+                    <p>By integrating microecological modulation with plant-derived extracellular matrix (ECM) simulation, our platform supports natural tissue repair without live bacteria, antibiotics, heavy-metal ions, or cold-chain infrastructure.</p>
+                </div>
+                <div class="card">
+                    <h3>Corporate Structure &amp; Core Values</h3>
+                    <p>Organized as a <strong>U.S. Delaware C-Corporation</strong>, LACTERA serves as the central platform for global intellectual property stewardship, international clinical research collaboration, and strategic commercialization.</p>
+                    <ul class="check-list" style="margin-top: 12px;">
+                        <li><strong>Scientific Excellence:</strong> Rigorous analytical and clinical validation</li>
+                        <li><strong>Patient-Centered Innovation:</strong> Accessible, non-invasive care</li>
+                        <li><strong>Clinical Integrity:</strong> Transparent, peer-reviewed evidence</li>
+                        <li><strong>Global Collaboration:</strong> Cross-border clinical and institutional partnerships</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. TECHNOLOGY PLATFORM -->
+    <section id="platform" class="subtle">
+        <div class="container">
+            <div class="section-label">Technology Platform</div>
+            <h2 class="section-title">Cell-Free Bioactive Ferment Filtrate System</h2>
+            <p class="section-intro">Developed through multi-strain anaerobic co-culture fermentation (<span translate="no"><em>Bifidobacterium</em></span> and <span translate="no"><em>Lactobacillus</em></span> species with plant-based soybean substrate), LACTERA’s cell-free filtrate functions via dual physical and microenvironmental mechanisms.</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>1. Bioactive Microecological Barrier</h3>
+                    <p>Enriched with natural organic acids (pH 3.3–3.6), the fluidic barrier maintains a physiological mildly acidic wound microenvironment and creates a physical impediment to bacterial quorum-sensing and biofilm colonization without heavy-metal cytotoxicity.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Plant-Based ECM Simulation</h3>
+                    <p>100% plant-derived soybean matrix eliminates zoonotic cross-infection risks. Low-molecular-weight bioactive peptides (&lt;1 kDa) and plant-derived extracellular vesicles structurally mimic human ECM to support fibroblast migration and orderly re-epithelialization.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Field-Ready Clinical Logistics</h3>
+                    <p>Calibrated 360° mist delivery (0.14 mL/spray) conforms uniformly to deep, irregular wound beds. Ambient stability across <strong>2°C–40°C for 36 months</strong> eliminates cold-chain requirements and integrates into standard care protocols in 60 seconds.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 28px;">
+                <h3>Target Clinical Research Applications</h3>
+                <div class="pill-group">
+                    <span class="pill">Acute Traumatic Wounds</span>
+                    <span class="pill">Chronic Non-Healing Wounds</span>
+                    <span class="pill">Diabetic Foot Ulcers (DFU)</span>
+                    <span class="pill">Split-Thickness Skin Graft (STSG) Donor Sites</span>
+                    <span class="pill">Post-Surgical Wound Management</span>
+                    <span class="pill">Complex Thermal &amp; Soft-Tissue Recovery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. SCIENTIFIC LEADERSHIP -->
+    <section id="science">
+        <div class="container">
+            <div class="section-label">Our Scientific Leadership</div>
+            <h2 class="section-title">Analytical Rigor &amp; International Academic Recognition</h2>
+            <p class="section-intro">Our scientific framework is anchored in quantitative analytical sequencing (LC-MS, LC-UV, NanoFCM), standardized international nomenclature, and peer-reviewed clinical investigation presented at leading global wound healing forums, including the <strong>World Union of Wound Healing Societies (WUWHS 2026 Congress)</strong>.</p>
+
+            <div class="spec-grid" translate="no">
+                <div class="spec-box">
+                    <div class="spec-num">11,300 PPM</div>
+                    <div class="spec-label">Natural Organic Acids</div>
+                    <div class="spec-detail">Maintains physiological pH 3.3–3.6 microenvironmental barrier</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-num">4,900 PPM</div>
+                    <div class="spec-label">Low-MW Peptides</div>
+                    <div class="spec-detail">92 sequenced chains via LC-MS; 75% &lt; 1 kDa for rapid bioavailability</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-num">1.1 &times; 10<sup>10</sup></div>
+                    <div class="spec-label">Plant Exosomes / mL</div>
+                    <div class="spec-detail">NanoFCM confirmed EVs (92–97 nm) supporting tissue regeneration</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-num">45,400 U</div>
+                    <div class="spec-label">SOD-Like Activity / 100mL</div>
+                    <div class="spec-detail">Antioxidant defense against oxidative stress in wound beds</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-num">1,030 PPM</div>
+                    <div class="spec-label">Free Amino Acids &amp; 575 PPM Nucleotides</div>
+                    <div class="spec-detail">Essential cellular building blocks for epidermal recovery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. CLINICAL EVIDENCE -->
+    <section id="clinical" class="subtle">
+        <div class="container">
+            <div class="section-label">Clinical Evidence</div>
+            <h2 class="section-title">Peer-Reviewed Clinical Trials &amp; Safety Profile</h2>
+            <p class="section-intro">The safety and clinical performance of the LACTERA® bioactive dressing system have been evaluated across prospective randomized controlled trials, multi-center cohort studies, and longitudinal safety assessments.</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Chronic Wounds Double-Blind RCT</h3>
+                    <p><strong>British Journal of Dermatology (2026)</strong><br>ClinicalTrials.gov: <span translate="no">NCT07008573</span></p>
+                    <p>Achieved <strong>94% complete wound healing</strong> at 24 weeks vs. 64% in control (P = 0.003), reducing mean time to full closure from 165.9 days to <strong>89.6 days</strong> (P = 0.012).</p>
+                </div>
+                <div class="card">
+                    <h3>STSG Donor Site Management</h3>
+                    <p><strong>Journal of Wound Care (2026) &amp; WUWHS 2026</strong></p>
+                    <p>Significantly reduced mean donor site healing time from 17 days down to <strong>11 days</strong> (~35% reduction), lowering dressing change frequency and patient discomfort.</p>
+                </div>
+                <div class="card">
+                    <h3>Diabetic Foot Ulcers &amp; Safety</h3>
+                    <p><strong>JWC (2023) &amp; SCMJ (2025)</strong></p>
+                    <p>Achieved <strong>83% complete healing</strong> within 16 weeks in DFU cohorts with PAOD/ESRD (mean 51 days), with <strong>0% clinical adverse events</strong> across longitudinal safety tracking.</p>
+                </div>
+            </div>
+
+            <!-- Exact Unmodified Table 1 from BJD 2026 -->
+            <div class="table-wrapper" translate="no">
+                <div class="table-caption">
+                    Table 1 Summary of all results of wound healing outcomes by treatment group; no further amputations or mortalities were observed in this study
+                </div>
+                <table class="clinical-table">
+                    <thead>
+                        <tr>
+                            <th>Outcome</th>
+                            <th>Bottle A<br>(<em>n</em> = 36)</th>
+                            <th>Bottle B<br>(<em>n</em> = 22)</th>
+                            <th><em>P</em>-value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Complete healing by 24 weeks, <em>n</em> (%)</td>
+                            <td>34 (94)</td>
+                            <td>14 (64)</td>
+                            <td>0.003</td>
+                        </tr>
+                        <tr>
+                            <td>Mean days to full healing, mean (SD)</td>
+                            <td>89.6 (17.6)</td>
+                            <td>165.9 (68.3)</td>
+                            <td>0.012</td>
+                        </tr>
+                        <tr class="group-header">
+                            <td colspan="4">Wound area reduction, mean (SD), days</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>25% reduction</td>
+                            <td>22.4 (5.46)</td>
+                            <td>30.8 (14.00)</td>
+                            <td>0.032</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>50% reduction</td>
+                            <td>29.4 (7.35)</td>
+                            <td>49.7 (23.17)</td>
+                            <td>0.028</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>75% reduction</td>
+                            <td>49.0 (12.25)</td>
+                            <td>84.0 (31.14)</td>
+                            <td>0.021</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>100% reduction</td>
+                            <td>89.6 (17.64)</td>
+                            <td>165.9 (68.25)</td>
+                            <td>0.012</td>
+                        </tr>
+                        <tr class="group-header">
+                            <td colspan="4">Healing at specific timepoints, <em>n</em> (%)</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>4 weeks</td>
+                            <td>6 (17)</td>
+                            <td>3 (14)</td>
+                            <td>0.757</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>8 weeks</td>
+                            <td>15 (42)</td>
+                            <td>7 (32)</td>
+                            <td>0.453</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>12 weeks</td>
+                            <td>21 (58)</td>
+                            <td>8 (36)</td>
+                            <td>0.104</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>16 weeks</td>
+                            <td>25 (69)</td>
+                            <td>9 (41)</td>
+                            <td>0.032</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>20 weeks</td>
+                            <td>33 (92)</td>
+                            <td>10 (45)</td>
+                            <td>&lt; 0.001</td>
+                        </tr>
+                        <tr class="indent">
+                            <td>24 weeks</td>
+                            <td>34 (94)</td>
+                            <td>14 (64)</td>
+                            <td>0.003</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footnote"><em>P</em>-values &lt; 0.05 were considered statistically significant.</div>
+                <div class="table-source">Source: Hsu H, Yang CC, et al. <em>British Journal of Dermatology</em> (BJD), 2026; 194(6):1192–1194 (ClinicalTrials.gov: NCT07008573). Bottle A: Active LACTERA® group; Bottle B: Control group.</div>
+            </div>
+
+            <div class="card" style="margin-top: 28px;">
+                <h3>Peer-Reviewed Academic References</h3>
+                <ol class="ref-list" translate="no">
+                    <li>Hsu H, Yang CC, Huang SM, Wu MS, Yao HE, Lin YW. Topical probiotics in soybean concentrate for diabetic foot ulcers: a randomized controlled trial. <em>British Journal of Dermatology (BJD)</em>, 2026, Vol. 194, No. 6, pp. 1192–1194.</li>
+                    <li>Yang CC, Wu SH, Wu MS, Cheng YT, Yao HE, Lin YW, Hsu H. Clinical Comparative Study of Topical Probiotics in Soybean Concentrate in the Management of Split-Thickness Skin Graft Donor Sites. <em>Journal of Wound Care (JWC)</em>, 2026, [Epub ahead of print]. Featured presentation at WUWHS 2026 Congress.</li>
+                    <li>Yang CC, Wu MS, Hsu H. Management of diabetic foot ulcers using topical probiotics in a soybean-based concentrate: a multicenter study. <em>Journal of Wound Care (JWC)</em>, 2023, Vol. 32, No. 12 (Suppl 12), pp. S16–S23.</li>
+                    <li>Huang TY, Chiang TW, Fu HK, Chen CF, Tseng SY, Lee TH. Macroscopic evaluation of clinical application and efficacy of aqueous wound dressing containing probiotic components. <em>Show-Chwan Medical Journal</em>, 2025, Vol. 24, No. 2, pp. 284–288.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. INTELLECTUAL PROPERTY & PROPRIETARY KNOW-HOW -->
+    <section id="ip">
+        <div class="container">
+            <div class="section-label">Intellectual Property &amp; Confidentiality</div>
+            <h2 class="section-title">Multi-Layered IP &amp; Proprietary Trade Secret Protection</h2>
+            <p class="section-intro">LACTERA Therapeutics maintains a disciplined intellectual property architecture designed to safeguard core biological manufacturing processes against reverse engineering while establishing durable commercial barriers.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Undisclosed Formulations &amp; Trade Secrets</h3>
+                    <p>To protect proprietary process advantages, our multi-strain anaerobic co-culture parameters, microbial acclimation protocols, exact compositional ratios, and cell-free extraction methods are strictly maintained as confidential trade secrets and undisclosed proprietary know-how.</p>
+                </div>
+                <div class="card">
+                    <h3>Granted Patent &amp; Standardized Nomenclature</h3>
+                    <ul class="check-list">
+                        <li><strong>Granted Invention Patent:</strong> Compositional wound-healing patent protection valid through 2039.</li>
+                        <li><strong>Official INCI Registration:</strong> Registered with the Personal Care Products Council (PCPC, Application No. 2018-7484) as <span translate="no"><em>Bifidobacterium / Lactobacillus / Soybean / Sucrose Ferment Filtrate</em></span> (Trade Name: <span translate="no">LACTERA®</span>).</li>
+                        <li><strong>Proprietary Data Assets:</strong> Exclusive ownership of clinical trial datasets and analytical characterization matrices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-banner">
+                <h4>Confidentiality &amp; Licensing Framework</h4>
+                <p>Detailed formulation specifications, manufacturing know-how, and technical dossiers are disclosed exclusively to qualified institutional investors, research institutions, and strategic partners upon execution of a standard <strong>Mutual Non-Disclosure Agreement (Mutual NDA)</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. GLOBAL MARKET PRESENCE -->
+    <section id="global" class="subtle">
+        <div class="container">
+            <div class="section-label">Global Presence &amp; Partnerships</div>
+            <h2 class="section-title">Real-World Clinical Validation &amp; International Expansion</h2>
+            <p class="section-intro">LACTERA combines established real-world healthcare utilization with an asset-light international expansion model built around clinical partnerships, local sterile filling collaborations, and technology licensing.</p>
+
+            <div class="highlight-banner" style="margin-bottom: 28px; margin-top: 0;">
+                <h4>International Clinical &amp; Humanitarian Deployment</h4>
+                <p><span translate="no">LACTERA Therapeutics</span> has successfully completed its initial product donation and clinical deployment to the <strong>National Rehabilitation Center "Unbroken" in Ukraine</strong>, receiving highly positive feedback from frontline medical teams regarding ease of application and wound management performance.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>United States</h3>
+                    <p>Corporate headquarters (Delaware C-Corporation), global IP governance, scientific affairs coordination, and institutional investor relations.</p>
+                </div>
+                <div class="card">
+                    <h3>Europe &amp; Ukraine</h3>
+                    <p>Ongoing complex wound care clinical collaboration and asset-light local sterile filling &amp; regulatory partnerships (ISO 13485 partner model).</p>
+                </div>
+                <div class="card">
+                    <h3>Asia-Pacific Markets</h3>
+                    <p>Established commercial utilization and real-world clinical experience supporting ongoing product validation and international expansion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08. LEADERSHIP GOVERNANCE & INVESTOR RELATIONS -->
+    <section id="governance">
+        <div class="container">
+            <div class="section-label">Leadership &amp; Scientific Governance</div>
+            <h2 class="section-title">Multidisciplinary Team Bridging Science &amp; Commercialization</h2>
+            <p class="section-intro">LACTERA Therapeutics is guided by an international team integrating corporate strategy, peer-reviewed clinical research, and cross-border healthcare operations.</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Executive Leadership &amp; Strategy</h3>
+                    <p>Leads corporate governance, global intellectual property strategy, institutional partnerships, and capital allocation under a U.S. Delaware C-Corporation structure, focusing on scalable international commercialization pathways.</p>
+                </div>
+                <div class="card">
+                    <h3>Scientific Advisory Board</h3>
+                    <p>Comprises principal investigators and clinical specialists in dermatology, reconstructive surgery, and complex wound care who have authored peer-reviewed studies in <em>BJD</em> and <em>JWC</em> and presented at the WUWHS Congress.</p>
+                </div>
+                <div class="card">
+                    <h3>Clinical &amp; Technical Operations</h3>
+                    <p>Oversees formulation standardization, ambient stability validation (2°C–40°C), quality compliance, and clinical deployment across healthcare centers and international medical networks.</p>
+                </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">* Detailed executive biographies, curriculum vitae, and principal investigator credentials are available to qualified institutional investors and clinical partners upon request under a Mutual NDA.</p>
+        </div>
+    </section>
+
+    <section id="investors" class="subtle" style="border-bottom: none;">
+        <div class="container">
+            <div class="section-label">Investor Relations &amp; Inquiries</div>
+            <h2 class="section-title">Partnering to Advance Global Wound Care</h2>
+            <p class="section-intro">LACTERA welcomes dialogue with institutional healthcare investors, biotechnology venture funds, family offices, corporate venture groups, and international clinical or licensing partners.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Investment Highlights</h3>
+                    <ul class="check-list">
+                        <li>Protected intellectual property &amp; undisclosed fermentation trade secrets</li>
+                        <li>Peer-reviewed double-blind RCT evidence (<em>BJD</em> &amp; <em>JWC</em>)</li>
+                        <li>Cold-chain-free logistics advantage (2°C–40°C for 36 months)</li>
+                        <li>Asset-light international licensing &amp; local sterile filling scalability</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Strategic Use of Capital</h3>
+                    <ul class="check-list">
+                        <li>International clinical research expansion &amp; multi-center registries</li>
+                        <li>Global regulatory pathway advancement &amp; dossier preparation</li>
+                        <li>Intellectual property portfolio expansion &amp; trade secret protection</li>
+                        <li>International commercial partnerships &amp; market development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div>
+                    <h3>Connect With LACTERA Therapeutics</h3>
+                    <p>For investor materials, research collaboration proposals, or licensing inquiries under Mutual NDA, please contact our executive office directly.</p>
+                </div>
+                <div class="contact-actions" translate="no">
+                    <a href="mailto:kono@lacteratx.com" class="email-pill">kono@lacteratx.com</a>
+                    <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand" translate="no">LACTERA Therapeutics, Inc.</div>
+                    <div>U.S. Delaware C-Corporation &nbsp;|&nbsp; Contact: <span translate="no">kono@lacteratx.com</span></div>
+                </div>
+                <div>
+                    &copy; 2026 <span translate="no">LACTERA Therapeutics, Inc.</span> All rights reserved.
+                </div>
+            </div>
+            <div class="disclaimer">
+                <strong>Regulatory &amp; Compliance Disclaimer:</strong> The information presented on this website is provided solely for scientific research, institutional collaboration, and investor evaluation purposes. <span translate="no">LACTERA®</span> is an investigational and internationally deployed bioactive wound care technology platform that has not been cleared or approved by the U.S. Food and Drug Administration (FDA) or European Union CE mark authorities for commercial medical distribution in the United States or European Union. Nothing on this website constitutes medical advice, a commercial product solicitation, or an offer to sell securities.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("kono@lacteratx.com").then(function() {
+                var btn = document.querySelector(".copy-btn");
+                btn.textContent = "Copied!";
+                setTimeout(function() {
+                    btn.textContent = "Copy Email";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
